@@ -287,7 +287,7 @@ Plug 'kien/ctrlp.vim'
 let g:ag_highlight=1
 let g:ag_working_path_mode="r"
 
-# :Ag !content
+# :Ag! content
 
 set wildignore+=*.zip,*.exe
 
@@ -318,13 +318,13 @@ let g:airline_theme='papercolor'
 ```
 Plug 'scrooloose/nerdcommenter'
 
+# <leader>c<space> 注释/取消注释
 # <leader>cc // 注释
 # <leader>cm 只用一组符号注释
 # <leader>cA 在行尾添加注释
 # <leader>c$ /* 注释 */
 # <leader>cs /* 块注释 */
 # <leader>cy 注释并复制
-# <leader>c<space> 注释/取消注释
 # <leader>ca 切换　// 和 /* */
 # <leader>cu 取消注释
 
@@ -334,6 +334,9 @@ let g:NERDCustomDelimiters = {
 			\ 'javascript': { 'left': '//', 'leftAlt': '/**', 'rightAlt': '*/' },
 			\ 'less': { 'left': '/**', 'right': '*/' }
 		\ }
+
+let g:NERDAltDelims_javascript = 1
+let g:NERDDefaultNesting = 0
 ```
 - [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 
@@ -375,7 +378,6 @@ Plug 'othree/html5.vim'
 - [othree/html5.vim](https://github.com/othree/html5.vim)
 
 ### `css 3`
-![][7]
 ```
 Plug 'hail2u/vim-css3-syntax'
 Plug 'ap/vim-css-color'
@@ -435,5 +437,3 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 # :Prettier
 ```
 - [prettier/vim-prettier](https://github.com/prettier/vim-prettier)
-```
-
