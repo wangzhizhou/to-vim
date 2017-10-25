@@ -130,6 +130,9 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 
+let g:ag_highlight=1
+let g:ag_working_path_mode="r"
+
 set wildignore+=*.zip     		" MacOSX/Linux
 set wildignore+=*.zip,*.exe  	" Windows
 
