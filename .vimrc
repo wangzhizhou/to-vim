@@ -130,6 +130,15 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 
+set wildignore+=*.zip     		" MacOSX/Linux
+set wildignore+=*.zip,*.exe  	" Windows
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](node_modules|DS_Store|dist|build|coverage)|(\.(git|hg|svn)$)',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+
 
 
 " -----------------------------------------------
@@ -254,6 +263,7 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 
 let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
 
