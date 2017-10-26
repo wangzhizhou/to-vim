@@ -1,0 +1,29 @@
+{
+  "name": "to-vim",
+  "version": "1.0.0",
+  "description": "如何让 vim 成为我们的神器",
+  "main": "README.md",
+  "author": "枫上雾棋",
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --single-quote --trailing-comma es5 --write ",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier": "1.7.4",
+    "stylelint-config-standard": "^17.0.0",
+    "validate-commit-msg": "^2.14.0"
+  }
+}
